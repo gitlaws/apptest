@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+	
+	
+	body {
+	    color: #fff;
+	    font-family: 'Nunito Semibold';
+	    text-align: center;
+	}
+
+	#content {
+	    display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    grid-auto-rows: minmax(100px, auto);
+	    grid-gap: 10px;
+	    max-width: 960px;
+	    margin: 0 auto;
+	    grid-template-areas:
+	        "header header header header"
+	        "main main main main"
+	        "main main main main"
+	        "aside aside nav nav"
+	        "section section section section"
+	        "section section section section"
+	        "footer footer footer footer";
+	}
+
+	/* desktop grid */
+	@media screen and (min-width: 760px) {
+	    #content {
+	        display: grid;
+	        grid-template-columns: repeat(4, 1fr);
+	        grid-auto-rows: minmax(100px, auto);
+	        grid-gap: 10px;
+	        max-width: 960px;
+	        margin: 0 auto;
+	        grid-template-areas:
+	            "header header header header"
+	            "aside main main main"
+	            "nav main main main"
+	            "section section section section"
+	            "section section section section"
+				"section section section section"
+				"section section section section"
+	            "footer footer footer footer";
+	    }
+	}
+
+	#content>* {
+	    background: #4ab028;
+	    padding: 30px;
+	}
+
+	header {
+	    grid-area: header;
+	}
+
+	main {
+	    grid-area: main;
+	}
+
+	aside {
+	    grid-area: aside;
+	}
+
+	nav {
+	    grid-area: nav;
+	}
+
+	section {
+	    grid-area: section;
+	}
+
+	footer {
+	    grid-area: footer;
+	    background: #333 !important;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: azure;
+	}
+
+	.social {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	    gap: 10px;
+	    font-size: 2em;
+		order: 1;
+	}
+
+	.copyr {
+		display: flex;
+		text-align: center;
+		justify-content: flex-start;
+		
+	}
+
+	.fa-square-facebook:hover {
+		color:#4267B2;
+	}
+
+	.fa-linkedin:hover {
+		color: #006192;
+	}
+
+	.fa-square-github:hover {
+		color: #6cc644;
+	}
+
+	.fa-discord:hover {
+		color: #7289da;
+	}
