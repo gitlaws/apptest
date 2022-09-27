@@ -3,7 +3,7 @@
 *::after {
 	box-sizing: border-box;
 }
-								/* playe no more */
+	
 	
 	body {
 	    color: #fff;
@@ -39,6 +39,7 @@
 	        margin: 0 auto;
 	        grid-template-areas:
 	            "header header header header"
+				"article article article article "
 	            "aside main main main"
 	            "nav main main main"
 	            "section section section section"
@@ -58,6 +59,9 @@
 	    grid-area: header;
 	}
 
+		article {
+			grid-area: article;
+		}
 	main {
 	    grid-area: main;
 	}
